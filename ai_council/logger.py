@@ -4,8 +4,8 @@ from datetime import datetime
 from typing import Any, Optional
 
 
-class Multi-ai-studioLogger:
-    """Singleton logger for Multi-ai-studio using standard Python logging."""
+class Multi_ai_studioLogger:
+    """Singleton logger for Multi_ai_studio using standard Python logging."""
     
     _instance = None
     _initialized = False
@@ -32,7 +32,7 @@ class Multi-ai-studioLogger:
                 handler.setFormatter(formatter)
                 self.logger.addHandler(handler)
             
-            self.info("Multi-ai-studio Session Started")
+            self.info("Multi_ai_studio Session Started")
     
     def log(self, message: str, data: Optional[Any] = None) -> None:
         """Log a message with optional data using INFO level."""
