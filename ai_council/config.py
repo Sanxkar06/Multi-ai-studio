@@ -1,5 +1,5 @@
 """
-Pydantic-based configuration system for AI Council.
+Pydantic-based configuration system for Multi_ai_studio.
 
 Follows Pydantic v2 best practices with proper BaseSettings usage.
 """
@@ -54,11 +54,11 @@ DEFAULT_CODE_NAMES = [
 ]
 
 
-class AICouncilConfig(BaseSettings):
-    """Main configuration class for AI Council using BaseSettings for environment support."""
+class Multi_ai_studioConfig(BaseSettings):
+    """Main configuration class for Multi_ai_studio using BaseSettings for environment support."""
     
     model_config = SettingsConfigDict(
-        env_prefix="AI_COUNCIL_",
+        env_prefix="Multi_ai_studio_",
         case_sensitive=False,
         extra="ignore"
     )
@@ -185,7 +185,7 @@ class AICouncilConfig(BaseSettings):
 def load_config(
     config_file: Optional[str] = None,
     **overrides
-) -> AICouncilConfig:
+) -> Multi-ai-studioConfig:
     """
     Load configuration from file and environment with overrides.
     
@@ -194,7 +194,7 @@ def load_config(
         **overrides: Direct field overrides
     
     Returns:
-        AICouncilConfig instance
+        Multi-ai-studioConfig instance
     """
     # Find config file if not specified
     if config_file is None:
@@ -214,4 +214,4 @@ def load_config(
     # Merge YAML data with overrides (overrides take precedence)
     config_data = {**yaml_data, **overrides}
 
-    return AICouncilConfig(**config_data)
+    return Multi-ai-studioConfig(**config_data)
