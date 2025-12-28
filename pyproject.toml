@@ -1,5 +1,5 @@
 [project]
-name = "ai-council"
+name = "Multi_ai_studio"
 version = "0.2.3"
 description = "Multi-AI consensus tool: MCP server that queries multiple AI models (OpenAI, Claude, Gemini, custom APIs) in parallel, synthesizes responses for better accuracy, and reduces AI bias through ensemble decision-making"
 authors = [{name = "Akuti", email = "a40723201+0xAkuti@users.noreply.github.com"}]
@@ -8,7 +8,7 @@ readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.10"
 keywords = [
     # Core functionality
-    "ai-council", "multi-model", "ai-aggregation", "ai-consensus", "model-ensemble", "ai-synthesis",
+    "Multi_ai_studio", "multi-model", "ai-aggregation", "ai-consensus", "model-ensemble", "ai-synthesis",
     "parallel-ai", "ai-comparison", "wisdom-of-crowds", "ai-collaboration", "model-fusion", "cognition-wheel",
     
     # MCP and server
@@ -46,12 +46,12 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/0xAkuti/ai-council-mcp"
-Repository = "https://github.com/0xAkuti/ai-council-mcp"
-Issues = "https://github.com/0xAkuti/ai-council-mcp/issues"
+Homepage = "https://github.com/0xAkuti/Multi_ai_studio-mcp"
+Repository = "https://github.com/0xAkuti/Multi_ai_studio-mcp"
+Issues = "https://github.com/0xAkuti/Multi_ai_studio-mcp/issues"
 
 [project.scripts]
-ai-council = "ai_council.main:main"
+Multi_ai_studio = "Multi_ai_studio.main:main"
 
 [build-system]
 requires = ["hatchling"]
