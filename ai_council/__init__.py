@@ -1,5 +1,5 @@
 """
-AI Council MCP Server
+Multi-ai-studio MCP Server
 
 An MCP server that consults multiple AI models in parallel and synthesizes 
 their responses into comprehensive answers.
