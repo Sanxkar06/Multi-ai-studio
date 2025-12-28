@@ -2,15 +2,15 @@ import random
 import re
 from typing import List, Tuple, Optional
 from .models import ModelConfig, ModelManager
-from .logger import AICouncilLogger
+from .logger import Multi_ai_studioLogger
 
 
 class ResponseSynthesizer:
     """Handles synthesis of multiple model responses into a final answer."""
     
-    def __init__(self, model_manager: ModelManager, logger: Optional[AICouncilLogger] = None):
+    def __init__(self, model_manager: ModelManager, logger: Optional[Multi_ai_studioLogger] = None):
         self.model_manager = model_manager
-        self.logger = logger or AICouncilLogger()
+        self.logger = logger or Multi_ai_studioLogger()
     
     def create_synthesis_prompt(
         self, 
