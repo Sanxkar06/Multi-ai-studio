@@ -21,7 +21,7 @@ from pydantic import AnyUrl, BaseModel
 
 from .models import ModelManager, ConfigValidationError
 from .synthesis import ResponseSynthesizer
-from .logger import AICouncilLogger
+from .logger import Multi_ai_studioLogger
 from .config import load_config
 
 
@@ -61,14 +61,14 @@ class ErrorResponse(BaseModel):
 
 
 # Union type for all possible responses
-AICouncilResponse = Union[SuccessResponse, ErrorResponse]
+Multi_ai_studioResponse = Union[SuccessResponse, ErrorResponse]
 
 
-class AICouncilServer:
+class Multi_ai_studioServer:
     """Main MCP server for AI Council."""
     
     def __init__(self, config=None):
-        self.logger = AICouncilLogger()
+        self.logger = Multi_ai_studioLogger()
         try:
             # Load config if not provided
             if config is None:
@@ -158,7 +158,7 @@ class AICouncilServer:
         if len(question) > 5000:
             raise ValueError("Question too long (max 5,000 characters)")
     
-    async def _process_ai_council(self, arguments: Dict[str, Any]) -> AICouncilResponse:
+    async def _process_ai_council(self, arguments: Dict[str, Any]) -> Multi_ai_studioResponse:
         """Process the AI council request."""
         start_time = time.time()
         
@@ -312,7 +312,7 @@ def main():
             
             config = load_config(config_file=args.config, **config_kwargs)
             
-            server = AICouncilServer(config=config)
+            server = Multi_ai_studioServer(config=config)
             await server.run()
         except (ConfigValidationError, ValueError) as e:
             print(f"Configuration error: {e}", file=sys.stderr)
