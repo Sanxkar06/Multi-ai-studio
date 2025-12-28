@@ -2,8 +2,8 @@ import asyncio
 import time
 from typing import List, Optional
 from openai import AsyncOpenAI
-from .logger import AICouncilLogger
-from .config import AICouncilConfig, ModelConfig, Provider, load_config
+from .logger import Multi_ai_studioLogger
+from .config import Multi_ai_studioConfig, ModelConfig, Provider, load_config
 
 
 class ConfigValidationError(Exception):
@@ -14,8 +14,8 @@ class ConfigValidationError(Exception):
 class ModelManager:
     """Manages model configurations and API calls."""
     
-    def __init__(self, config: Optional[AICouncilConfig] = None, logger: Optional[AICouncilLogger] = None):
-        self.logger = logger or AICouncilLogger()
+    def __init__(self, config: Optional[Multi_ai_studioConfig] = None, logger: Optional[Multi_ai_studioLogger] = None):
+        self.logger = logger or Multi_ai_studioLogger()
         self.config = config or load_config()
         self._apply_log_level()
         self._validate_api_keys()
