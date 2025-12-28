@@ -1,12 +1,12 @@
-# AI Council MCP Server
+# Multi-AI-Studio
 
 > **Multi-AI Consensus Tool**: Query multiple AI models in parallel, synthesize responses for better accuracy, and reduce AI bias through ensemble decision-making.
 
-AI Council is a powerful MCP (Model Context Protocol) server that harnesses the "wisdom of crowds" by consulting multiple AI models simultaneously. Get more reliable, comprehensive answers by combining insights from OpenAI, Claude, Gemini, and any OpenAI-compatible API.
+Multi-AI-Studio is a powerful MCP (Model Context Protocol) server that harnesses the "wisdom of crowds" by consulting multiple AI models simultaneously. Get more reliable, comprehensive answers by combining insights from OpenAI, Claude, Gemini, and any OpenAI-compatible API.
 
-## ✨ What is AI Council?
+## ✨ What is Multi-ai-studio?
 
-AI Council transforms how you interact with AI by:
+Multi-AI-Studio transforms how you interact with AI by:
 
 - **🔄 Parallel Processing**: Queries multiple AI models simultaneously (not sequentially)
 - **🎯 Bias Reduction**: Uses anonymous code names to prevent synthesis bias
@@ -23,11 +23,11 @@ AI Council transforms how you interact with AI by:
   - **pipx** installed ([installation guide](https://pipx.pypa.io/stable/installation)), update config 
     ```json
       "command": "pipx",
-      "args": ["run", "ai-council"]
+      "args": ["run", "Multi-ai-studio"]
     ```
   - or manual install wiht `pip install ai-council`, and update config
       ```json
-      "command": "ai-council",
+      "command": "Multi-ai-studio",
       "args": []
     ```
 
@@ -44,7 +44,7 @@ AI Council transforms how you interact with AI by:
 {
   "ai-council": {
     "command": "uvx",
-    "args": ["ai-council"],
+    "args": ["Multi-ai-studio"],
     "env": {
       "OPENROUTER_API_KEY": "..."
     }
@@ -61,7 +61,7 @@ AI Council transforms how you interact with AI by:
   "mcpServers": {
     "ai-council": {
       "command": "uvx",
-      "args": ["ai-council"],
+      "args": ["Multi-ai-studio"],
       "env": {
         "OPENROUTER_API_KEY": "..."
       }
@@ -128,7 +128,7 @@ models:
 
 ## 📖 How It Works
 
-AI Council uses a sophisticated three-phase approach:
+Multi-ai-studio uses a sophisticated three-phase approach:
 
 ### 1. **Parallel Consultation** 
 - Simultaneously queries your configured AI models
@@ -149,7 +149,7 @@ AI Council uses a sophisticated three-phase approach:
 
 This project was inspired by [Cognition Wheel](https://github.com/Hormold/cognition-wheel).
 
-AI Council extends these ideas with:
+Multi-ai-studio extends these ideas with:
 - Enhanced configuration flexibility  
 - OpenRouter support for many model options with a single api key
 - Support for custom API endpoints
